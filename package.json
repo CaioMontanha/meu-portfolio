@@ -1,0 +1,12 @@
+{
+  "name": "site-editavel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "formatar": "prettier --write index.html manifest.json package.json .prettierrc.json",
+    "verificar-formatacao": "prettier --check index.html manifest.json package.json .prettierrc.json"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
