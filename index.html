@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./recursos/logo_montanha_2_VERSAO_2.png" type="image/png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <meta name="description" content="Portfólio de Caio Peixoto, desenvolvedor Full Stack." />
+    <link rel="apple-touch-icon" href="./recursos/logo_montanha_2_VERSAO_2.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Caio Peixoto | Full Stack</title>
+    <script type="module" crossorigin src="./recursos/portfolio-caio.js"></script>
+    <link rel="modulepreload" href="./recursos/vendor.92c357a7.js" />
+    <link rel="stylesheet" href="./recursos/estilos-portfolio.css" />
+  </head>
+
+  <body>
+    <noscript>Ative o JavaScript para usar este site.</noscript>
+    <div id="root"></div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('./service-worker.js')
+            .then((registro) => console.log('Registro concluído', registro.scope))
+            .catch((erro) => console.log('Falha no registro', erro));
+        });
+      }
+    </script>
+  </body>
+</html>

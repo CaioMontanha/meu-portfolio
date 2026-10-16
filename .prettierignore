@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+recursos/
+icones/
+_ext/
+*.zip
+*.jpg
+*.jpeg
+*.png
+*.woff2
+package-lock.json
