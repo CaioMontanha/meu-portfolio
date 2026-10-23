@@ -700,7 +700,11 @@ import{W as j,s as t,S as z,j as i,a as e,G as I,A as O,r as d,H as f,T as P,F a
     border-radius:2px;
     background:#18181a;
     box-shadow:0 10px 30px -15px #0f0f10e8;
+    color:inherit;
+    text-decoration:none;
+    cursor:pointer;
     transition:all .2s ease-in-out;
+    &:focus-visible { outline:2px solid #ffb464; outline-offset:4px; }
 
     &:hover { transform:translateY(-3px); h2 { color:#ffb464; } }
 `,ProjectDescription=t.p`
@@ -708,7 +712,14 @@ import{W as j,s as t,S as z,j as i,a as e,G as I,A as O,r as d,H as f,T as P,F a
     color:#c5c5c5;
     font-size:.95rem;
     line-height:1.5;
-`,ProjCard=({title,description,image,children})=>i(ProjectTile,{children:[e(ze,{children:title}),description&&e(ProjectDescription,{children:description}),e(ProjectImage,{children:e("img",{src:image,alt:"Tela do projeto "+title,loading:"lazy"})}),e(Se,{children})]});function Projects(){return i(Fe,{id:"projects",children:[e(b,{number:"03",title:"Projetos"}),i(Te,{children:[i(ProjCard,{title:"STORAR",image:"./storar.png",description:"Previsão de estoque.",children:[e("span",{children:"React"}),e("span",{children:"TypeScript"}),e("span",{children:"Vite"}),e("span",{children:"Django REST Framework"}),e("span",{children:"SQLite"})]}),i(ProjCard,{title:"Reservow",image:"./reservow.png",description:"Aplicação de gestão de reservas e passeios.",children:[e("span",{children:"Laravel 12"}),e("span",{children:"PHP 8.3"}),e("span",{children:"Blade"}),e("span",{children:"Bootstrap 5"}),e("span",{children:"SQLite"})]}),i(ProjCard,{title:"Olho de Zeus",image:"./olho%20de%20zeus.png",description:"Painel de monitoramento de APIs.",children:[e("span",{children:"React"}),e("span",{children:"TypeScript"}),e("span",{children:"Vite"}),e("span",{children:"Node.js"}),e("span",{children:"Express"}),e("span",{children:"PostgreSQL (PGlite)"})]}),i(ProjCard,{title:"Chamatech",image:"./chamatech.jpeg",children:[e("span",{children:"Next.js 16"}),e("span",{children:"React 19"}),e("span",{children:"TypeScript"}),e("span",{children:"Tailwind CSS"}),e("span",{children:"Supabase"})]}),i(ProjCard,{title:"Diciplinando",image:"./disciplinando.png",description:"App de hábitos e disciplina.",children:[e("span",{children:"Next.js 16"}),e("span",{children:"React 19"}),e("span",{children:"TypeScript"}),e("span",{children:"Tailwind CSS"}),e("span",{children:"shadcn/ui"})]})]})]})}const Me=t.div`
+`,ProjCard=({title,description,image,url,children})=>i(ProjectTile,{as:"a",href:url,target:"_blank",rel:"noopener noreferrer",children:[e(ze,{children:title}),description&&e(ProjectDescription,{children:description}),image&&e(ProjectImage,{children:e("img",{src:image,alt:"Tela do projeto "+title,loading:"lazy"})}),e(Se,{children})]});function Projects(){return i(Fe,{id:"projects",children:[e(b,{number:"03",title:"Projetos"}),i(Te,{children:[
+  i(ProjCard,{title:"STORAR",url:"https://github.com/CaioMontanha/storar",image:"./storar.png",description:"Previs\u00e3o de estoque.",children:[e("span",{children:"React"}),e("span",{children:"TypeScript"}),e("span",{children:"Vite"}),e("span",{children:"Django REST Framework"}),e("span",{children:"SQLite"})]}),
+  i(ProjCard,{title:"Reservow",url:"https://github.com/CaioMontanha/reservow",image:"./reservow.png",description:"Aplica\u00e7\u00e3o de gest\u00e3o de reservas e passeios.",children:[e("span",{children:"Laravel 12"}),e("span",{children:"PHP 8.3"}),e("span",{children:"Blade"}),e("span",{children:"Bootstrap 5"}),e("span",{children:"SQLite"})]}),
+  i(ProjCard,{title:"Olho de Zeus",url:"https://github.com/CaioMontanha/olho-de-zeus",image:"./olho%20de%20zeus.png",description:"Painel de monitoramento de APIs.",children:[e("span",{children:"React"}),e("span",{children:"TypeScript"}),e("span",{children:"Vite"}),e("span",{children:"Node.js"}),e("span",{children:"Express"}),e("span",{children:"PostgreSQL (PGlite)"})]}),
+  i(ProjCard,{title:"PixProtect",url:"https://github.com/CaioMontanha/pixprotect",description:"Painel demonstrativo de an\u00e1lise de risco para transa\u00e7\u00f5es Pix, com score explic\u00e1vel e dashboard.",children:[e("span",{children:"Python"}),e("span",{children:"TypeScript"}),e("span",{children:"React"}),e("span",{children:"Django"}),e("span",{children:"SQLite"}),e("span",{children:"HTML"}),e("span",{children:"CSS"})]}),
+  i(ProjCard,{title:"Chamatech",url:"https://github.com/CaioMontanha/site-chamatech",image:"./chamatech.jpeg",children:[e("span",{children:"Next.js 16"}),e("span",{children:"React 19"}),e("span",{children:"TypeScript"}),e("span",{children:"Tailwind CSS"}),e("span",{children:"Supabase"})]}),
+  i(ProjCard,{title:"Diciplinando",url:"https://github.com/CaioMontanha/diciplinando",image:"./disciplinando.png",description:"App de h\u00e1bitos e disciplina.",children:[e("span",{children:"Next.js 16"}),e("span",{children:"React 19"}),e("span",{children:"TypeScript"}),e("span",{children:"Tailwind CSS"}),e("span",{children:"shadcn/ui"})]})
+]})]})}const Me=t.div`
 
   @media (max-width: 1024px) {
     display: none;
