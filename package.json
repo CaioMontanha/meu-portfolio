@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "rodar": "python -m http.server 8000",
     "formatar": "prettier --write index.html manifest.json package.json .prettierrc.json",
     "verificar-formatacao": "prettier --check index.html manifest.json package.json .prettierrc.json"
   },
