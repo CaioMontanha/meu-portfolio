@@ -66,6 +66,74 @@
       html[data-theme="light"] #root svg {
         filter: hue-rotate(180deg) invert(1);
       }
+
+      html[data-theme="light"] #root .social-rail svg,
+      html[data-theme="light"] #root .social-rail svg path {
+        fill: #000 !important;
+        stroke: #000 !important;
+      }
+
+      #root a.hero-action {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        overflow: hidden;
+        border: 2px solid #f55f19 !important;
+        background: transparent !important;
+        color: #fff !important;
+      }
+
+      #root a.hero-action::before {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 100%;
+        content: "";
+        background: #f55f19;
+        transform: translate(-50%, -50%);
+        transition: width .7s ease;
+      }
+
+      #root a.hero-action:hover {
+        color: #fff !important;
+      }
+
+      #root a.hero-action:hover::before {
+        width: 100%;
+      }
+
+      #root .projects-section {
+        max-width: 1280px;
+      }
+
+      #root .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+        gap: 1.75rem;
+      }
+
+      #root .project-grid article {
+        width: 100%;
+        max-width: 720px;
+      }
+
+      @media (max-width: 900px) {
+        #root .project-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 620px) {
+        #root .project-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        #root .project-grid article {
+          min-height: auto;
+        }
+      }
     </style>
     <script type="module" crossorigin src="./recursos/portfolio-caio.js"></script>
     <link rel="modulepreload" href="./recursos/vendor.92c357a7.js" />
